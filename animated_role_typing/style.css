@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(80, 80, 102);
+}
+
+.card{
+    background-color: rgb(65, 65, 123);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 20px rgb(240, 233, 233);
+    border-radius: 50%;
+    font-size: 2rem;
+}
+.role::after{
+content: "";
+background-color: rgb(226, 235, 235);
+position: absolute;
+min-width: 2px;
+height: 40px;
+/* transition: all 1s ease-in ; */
+/* top:1px; */
+animation-name: blinker;
+animation-duration: 0.8s;
+animation-timing-function: blinker;
+animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    /* 25%{
+        opacity: 0.25;
+        scale: 0.25;
+    } */
+    50%{
+        opacity: 0.5;
+        scale:0.5;;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
