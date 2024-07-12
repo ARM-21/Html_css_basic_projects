@@ -75,8 +75,9 @@ opacity: 1;
 .ellipse{
     border-radius: 50%;
     opacity: 0.5;
-    filter: blur(10p);
-    z-index: 0;
+    filter: blur(10px);
+    /* z-index: 0; */
+    backdrop-filter: blur(10px);
 }
 
 .main_card img{
