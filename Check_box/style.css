@@ -1,0 +1,131 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    margin: 0;
+    background-color: #f0f0f0
+}
+#checkbox:focus + label,.check_label:hover{
+    outline: 2px solid #4A18D9;
+}
+#checkbox:checked + label{
+    background-color: #4A18D9;
+}
+.check_label{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #4A18D9;
+    border-radius: 5px;
+    position: relative;
+    margin-top:20px;
+}
+
+#checkbox{
+background-color: white;
+position: absolute;
+accent-color: #4A18D9;
+opacity: 0;
+}
+
+/* !!!!//toogle switch */
+.toggle_switch{
+    margin-top: 20px;
+}
+
+.toggle_label{
+    background-color: rgba(130, 124, 124, 0.958);
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 18px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+    border:2px solid #4A18D9;
+    transition: all 300ms ease-in-out;
+}
+#toggle_switch:focus + .toggle_label,.toggle_label:hover{
+    outline: 1px solid #5b4097a1;
+
+}
+#toggle_switch{
+    position: absolute;
+    opacity: 0;
+}
+
+#toggle_switch:checked + .toggle_label{
+    background-color: #4A18D9;
+    /* justify-content: flex-end; */
+}
+#toggle_switch:checked + .toggle_label > img{
+    right: 0;
+}
+
+.toggle_label img{
+    position: absolute;
+}
+
+/* drop-down */
+.drop_down{
+    margin-top: 20px;
+    
+    width: 50%;
+    
+}
+.arrow_down{
+    transition: transform 300ms ease-out;
+}
+
+.drop-down-header{
+    background-color: #4A18D9;
+    max-width: 300px;
+    display: flex;
+    padding: 5px 8px;
+    align-items: center;
+    justify-content: space-between;
+   
+    color: white;
+    
+}
+.first_section{
+    display: flex;
+    align-items: center;
+    gap:10px;   
+}
+.rotateArrow{
+    transform: rotate(-180deg);
+    fill:white;
+}
+
+.dropDown_items li{
+list-style: none;
+padding: 5px 5px 5px 30px;
+
+
+
+}
+.dropDown_items li:hover{
+    background-color: rgb(167, 179, 179);
+}
+.dropDown_items{
+    background-color: aliceblue;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    max-height:0px;
+    transition: all 200ms ease-out;
+}
+
+.dropDown_items ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dropDown_items_open{
+    max-height: 400px;
+}
