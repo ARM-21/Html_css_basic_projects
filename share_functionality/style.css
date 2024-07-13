@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+    --color-brand:#3166c0;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    height: 20px;
+    background-color: var(--color-brand);
+}
+
+.container {
+    min-height: 90vh;
+    display: flex;
+    background-color: #1b2029;
+}
+
+.card {
+    margin: auto;
+    min-height: 210px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: var(--color-brand);
+    position: relative;
+}
+
+.first_section {
+    margin-top: 2px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.first_section img {
+    height: 15px;
+}
+
+.image {
+    display: flex;
+    position: relative;
+
+}
+
+.image img {
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(226, 215, 215);
+    height: 60px;
+    position: relative;
+    z-index: 100;
+}
+
+.user_details::before {
+    content: "";
+    position: absolute;
+    background-color: green;
+    width: 9px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    right: 36%;
+    z-index: 1000;
+    border:2px solid rgb(226, 215, 215);
+
+}
+.user_details{
+    position: relative;
+    min-height:110px;
+    width: 90%;
+    margin: auto;
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    border-radius: 20px;
+    background-color:rgb(135, 146, 146);
+    bottom: 10%;
+    left:5%;  
+    gap:2px;
+}
+.user_details button{
+    border-radius: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    font-size: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #FECD2F 0%, #FEB02F 100%);
+
+}
+.social_media img{
+    height: 10px;
+    cursor: pointer;
+    /* margin-inline: auto; */
+}
+.social_media{
+    width: 100%;
+    margin-top:10px;
+    border-top: 1px solid rgba(128, 128, 128, 0.772);
+    padding-top:5px ;
+    display: flex;
+ 
+}
+.social_media span{
+    
+    margin: auto;
+}
+.footer{
+    height:20px;
+    width: 100%;
+    background-color: var(--color-brand);
+    position: absolute;
+    bottom: 0;
+}
