@@ -1,0 +1,99 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool_tip_container img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+.tool_tip_container {
+    width: 40%;
+    /* height: 100%; */
+    min-height: 200px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background-color: rgb(30, 28, 28);
+    border: 2px solid rgb(108, 106, 106);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.tool_tip{
+    display: flex;
+    /* height: ; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.mongo{
+    color: green;
+}
+
+.react{
+    color:skyblue;
+}
+.express{
+    color:white;
+}
+.node{
+    color: green;
+}
+.first-letter {
+    margin-top: 28px;
+}
+.pop_up{
+    font-size: 12px;
+    width: 60px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:30%;
+    border-radius: 5px;
+    background-color:green;
+    color: black;
+    opacity: 0;
+    transition: top 100ms ease-in-out;
+    
+}
+.pop_up::after{
+content: "";
+width:8px;
+height: 8px;
+position: absolute;
+transform: rotate(45deg);
+bottom: -20%;
+background-color: inherit;
+}
+.react .pop_up{
+    background-color: skyblue;
+}
+.express .pop_up{
+    background-color: white;
+}
+.pop_up span{
+    position: relative;
+    z-index: 2;
+}
+.tool_tip:hover .pop_up{
+    top:20%;
+    opacity: 1;
+}
